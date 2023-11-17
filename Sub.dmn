@@ -32,6 +32,12 @@
     <dmn:extensionElements/>
     <dmn:variable id="_3575BEA4-4457-450E-8CE7-37C21A924F2F" name="State" typeRef="string"/>
   </dmn:inputData>
+  <dmn:decisionService id="_37E91C11-80D9-42EB-91E0-2FDCC803F60A" name="DecisionService-1">
+    <dmn:extensionElements/>
+    <dmn:variable id="_A6B0A784-5806-4199-BE22-EF0CAFCD958C" name="DecisionService-1"/>
+    <dmn:outputDecision href="#_47752A16-5D25-4B71-9DFA-442913506428"/>
+    <dmn:inputData href="#_8185360A-8B7D-4AAC-89C6-504A6F8A5470"/>
+  </dmn:decisionService>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_77702A8E-854B-47B0-AF3D-45617050C883" name="DRG">
       <di:extension>
@@ -50,7 +56,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="648" y="156" width="100" height="50"/>
+        <dc:Bounds x="342" y="155" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_8185360A-8B7D-4AAC-89C6-504A6F8A5470" dmnElementRef="_8185360A-8B7D-4AAC-89C6-504A6F8A5470" isCollapsed="false">
@@ -62,9 +68,22 @@
         <dc:Bounds x="709" y="298" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_37E91C11-80D9-42EB-91E0-2FDCC803F60A" dmnElementRef="_37E91C11-80D9-42EB-91E0-2FDCC803F60A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="292" y="116" width="200" height="200"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="292" y="216"/>
+          <di:waypoint x="492" y="216"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_9B850CE5-4EAC-424F-8CA3-EAC51C6E19E3" dmnElementRef="_9B850CE5-4EAC-424F-8CA3-EAC51C6E19E3">
         <di:waypoint x="759" y="323"/>
-        <di:waypoint x="698" y="181"/>
+        <di:waypoint x="392" y="180"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
