@@ -357,6 +357,9 @@ else "Insufficient"</dmn:text>
     <dmn:informationRequirement id="_B6002F33-4888-48C5-B265-636030F8C2DC">
       <dmn:requiredDecision href="#_2FE51DB1-3083-4BF7-AA71-0B0065310E72"/>
     </dmn:informationRequirement>
+    <dmn:informationRequirement id="_7B76E441-43E5-4A64-BFBF-ADBD65644613">
+      <dmn:requiredDecision href="#_18586122-EDEC-4EEE-969E-D270E32D2BB4"/>
+    </dmn:informationRequirement>
     <dmn:decisionTable id="_EF7F404A-939E-4889-95D8-E4053DD1EED9" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_58ABD81B-FD16-45C3-9E64-DB271AA917C0">
         <dmn:inputExpression id="_5262441E-F812-4554-AF02-5267BDDF80F5" typeRef="Credit_Score_Rating">
@@ -373,6 +376,11 @@ else "Insufficient"</dmn:text>
           <dmn:text>Front End Ratio</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
+      <dmn:input id="_0D4A1BAF-9422-46C9-8D1B-29AD16D95B21">
+        <dmn:inputExpression id="_A83DDE8C-C628-4ED7-AFED-93B221675BD2" typeRef="string">
+          <dmn:text>State</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
       <dmn:output id="_B895B095-C3D6-48B4-8A50-D2D3B8CC6A45" name="Qualification" typeRef="string"/>
       <dmn:output id="_A8D2D3B1-07B3-4619-8DE0-F923F511058B" name="Reason" typeRef="string"/>
       <dmn:annotation name=""/>
@@ -385,6 +393,9 @@ else "Insufficient"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_1554A983-B2C1-40A7-9614-50720420F4B2">
           <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_50086B2E-1707-444C-B0A6-CB1F7534F877">
+          <dmn:text>"CA"</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_7B39B964-4E25-4717-92FE-A36F2B39FAB9">
           <dmn:text>"Not Qualified"</dmn:text>
@@ -406,6 +417,9 @@ else "Insufficient"</dmn:text>
         <dmn:inputEntry id="_78A3C3A0-EEBC-448B-B1C1-5CFF6C7F2AC5">
           <dmn:text>"Sufficient"</dmn:text>
         </dmn:inputEntry>
+        <dmn:inputEntry id="_1CD202DC-8B83-4C1F-990F-452C9B28634A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
         <dmn:outputEntry id="_3C38D181-CCA1-4678-A3DD-0A5CE6D59FDC">
           <dmn:text>"Not Qualified"</dmn:text>
         </dmn:outputEntry>
@@ -425,6 +439,9 @@ else "Insufficient"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_09A23FD4-9A98-4C34-9E9B-9E8EE652ABBC">
           <dmn:text>"Insufficient"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_13B24626-BE3D-436B-8CC6-70702E3131E7">
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_9BF1096A-1AF3-4D21-9273-460DE555F0B6">
           <dmn:text>"Not Qualified"</dmn:text>
@@ -446,6 +463,9 @@ else "Insufficient"</dmn:text>
         <dmn:inputEntry id="_544687CD-F3A2-46C7-8439-E5E2E7B6483D">
           <dmn:text>"Insufficient"</dmn:text>
         </dmn:inputEntry>
+        <dmn:inputEntry id="_ADF3800A-2C93-4CCB-B580-C7581D9A95A4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
         <dmn:outputEntry id="_5A958D2E-B310-4AB9-BF5B-49623BE5DB55">
           <dmn:text>"Not Qualified"</dmn:text>
         </dmn:outputEntry>
@@ -465,6 +485,9 @@ else "Insufficient"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_41CB6123-8122-4FA4-A5C1-548B92CA31AE">
           <dmn:text>"Sufficient"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6E70B40C-F25F-47E2-8F5B-A41D237ACE7F">
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_9E0497D0-F2F2-419E-A558-366452B379A1">
           <dmn:text>"Qualified"</dmn:text>
@@ -502,6 +525,23 @@ else "Insufficient"</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
+  <dmn:inputData id="_F1AB1C4C-4D1D-4C36-BA75-76CD15FDA438" name="InputState">
+    <dmn:extensionElements/>
+    <dmn:variable id="_4CA2A662-8759-448F-A3EE-594E8395FB7E" name="InputState"/>
+  </dmn:inputData>
+  <dmn:decision id="_18586122-EDEC-4EEE-969E-D270E32D2BB4" name="State">
+    <dmn:extensionElements/>
+    <dmn:variable id="_BAC03C86-30A9-4DA7-B39F-23E2B73DFA33" name="State"/>
+    <dmn:informationRequirement id="_79E0B656-A216-4C3F-81BE-3F131DBA08FC">
+      <dmn:requiredInput href="#_F1AB1C4C-4D1D-4C36-BA75-76CD15FDA438"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_50FBFF2C-9FE8-4C97-9F59-93F983FD0D2A">
+      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_62CEE1F8-ED3B-4E08-B63D-0C2F133D84EB#_37E91C11-80D9-42EB-91E0-2FDCC803F60A"/>
+    </dmn:knowledgeRequirement>
+    <dmn:literalExpression id="_A96C5E89-0F7F-4360-86D2-7E353BD661E7">
+      <dmn:text>SubModel.DecisionService-1(State:InputState)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_1608585F-01C8-4A66-B3E5-F4422D4DD2CA" name="DRG">
       <di:extension>
@@ -577,6 +617,7 @@ else "Insufficient"</dmn:text>
             <kie:width>227</kie:width>
             <kie:width>125</kie:width>
             <kie:width>125</kie:width>
+            <kie:width>100</kie:width>
             <kie:width>135</kie:width>
             <kie:width>681</kie:width>
             <kie:width>100</kie:width>
@@ -595,8 +636,24 @@ else "Insufficient"</dmn:text>
             <kie:width>50</kie:width>
             <kie:width>228</kie:width>
           </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A96C5E89-0F7F-4360-86D2-7E353BD661E7">
+            <kie:width>525</kie:width>
+          </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_37E91C11-80D9-42EB-91E0-2FDCC803F60A" dmnElementRef="included1:_37E91C11-80D9-42EB-91E0-2FDCC803F60A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="1200" y="269" width="200" height="200"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="1200" y="369"/>
+          <di:waypoint x="1400" y="369"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_4C89E59C-FDDA-438C-8D1F-0B1194EF6DAE" dmnElementRef="_4C89E59C-FDDA-438C-8D1F-0B1194EF6DAE" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -696,6 +753,24 @@ else "Insufficient"</dmn:text>
         <dc:Bounds x="747" y="224.64473684210526" width="134" height="65"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_F1AB1C4C-4D1D-4C36-BA75-76CD15FDA438" dmnElementRef="_F1AB1C4C-4D1D-4C36-BA75-76CD15FDA438" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="1410" y="135" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_18586122-EDEC-4EEE-969E-D270E32D2BB4" dmnElementRef="_18586122-EDEC-4EEE-969E-D270E32D2BB4" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="1179" y="107" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_89EEAF9F-5A5D-4F59-91B7-EA418A7229AF" dmnElementRef="_89EEAF9F-5A5D-4F59-91B7-EA418A7229AF">
         <di:waypoint x="383.0607476635514" y="361"/>
         <di:waypoint x="599" y="287"/>
@@ -739,6 +814,18 @@ else "Insufficient"</dmn:text>
       <dmndi:DMNEdge id="dmnedge-drg-_B6002F33-4888-48C5-B265-636030F8C2DC" dmnElementRef="_B6002F33-4888-48C5-B265-636030F8C2DC">
         <di:waypoint x="1031" y="256"/>
         <di:waypoint x="600" y="151"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_7B76E441-43E5-4A64-BFBF-ADBD65644613-AUTO-TARGET" dmnElementRef="_7B76E441-43E5-4A64-BFBF-ADBD65644613">
+        <di:waypoint x="1229" y="132"/>
+        <di:waypoint x="668" y="120"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_79E0B656-A216-4C3F-81BE-3F131DBA08FC-AUTO-TARGET" dmnElementRef="_79E0B656-A216-4C3F-81BE-3F131DBA08FC">
+        <di:waypoint x="1460" y="160"/>
+        <di:waypoint x="1279" y="132"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_50FBFF2C-9FE8-4C97-9F59-93F983FD0D2A" dmnElementRef="_50FBFF2C-9FE8-4C97-9F59-93F983FD0D2A">
+        <di:waypoint x="1300" y="369"/>
+        <di:waypoint x="1229" y="132"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
